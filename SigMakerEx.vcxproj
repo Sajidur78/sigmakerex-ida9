@@ -75,7 +75,6 @@
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>IDA_SigMaker</TargetName>
-    <TargetExt>.dLL</TargetExt>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\imd\</IntDir>
   </PropertyGroup>
@@ -83,7 +82,6 @@
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>IDA_SigMaker64</TargetName>
-    <TargetExt>.dLL</TargetExt>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\imd\</IntDir>
   </PropertyGroup>
@@ -91,7 +89,6 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>IDA_SigMaker</TargetName>
-    <TargetExt>.dLL</TargetExt>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\imd\</IntDir>
   </PropertyGroup>
@@ -99,7 +96,6 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>IDA_SigMaker64</TargetName>
-    <TargetExt>.dLL</TargetExt>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\imd\</IntDir>
   </PropertyGroup>
@@ -135,7 +131,8 @@
       <TurnOffAssemblyGeneration>true</TurnOffAssemblyGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|x64'">
@@ -170,7 +167,8 @@
       <TurnOffAssemblyGeneration>true</TurnOffAssemblyGeneration>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -212,8 +210,8 @@
       <AdditionalOptions>/NOVCFEATURE /NOCOFFGRPINFO %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-      <Command>@if exist "%_TOOLS%\peupdate\peupdate.exe" ("%_TOOLS%\peupdate\peupdate.exe" -s -r -q "$(OutDir)$(TargetFileName)")
-copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release64|x64'">
@@ -255,8 +253,8 @@ copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
       <AdditionalOptions>/NOVCFEATURE /NOCOFFGRPINFO %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-      <Command>@if exist "%_TOOLS%\peupdate\peupdate.exe" ("%_TOOLS%\peupdate\peupdate.exe" -s -r -q "$(OutDir)$(TargetFileName)")
-copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

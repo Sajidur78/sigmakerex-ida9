@@ -179,6 +179,17 @@ struct SIG
     }
 };
 
+// compatibility with newer IDA versions
+struct info_t
+{
+	ea_t min_ea;
+	ea_t max_ea;
+
+	info_t();
+};
+
+extern info_t inf;
+
 // Search.cpp
 enum SSTATUS
 {

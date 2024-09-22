@@ -1,6 +1,14 @@
 ﻿
 // Plugin main
 #include "SigMaker.h"
+info_t inf;
+
+// new IDA compatibility
+info_t::info_t()
+{
+    min_ea = inf_get_min_ea();
+    max_ea = inf_get_max_ea();
+}
 
 // UI "actions"
 enum SIG_ACTION
